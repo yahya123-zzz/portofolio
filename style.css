@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: rgb(241, 234, 234);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1.5rem 9%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 3rem;
+    color: black;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: rgb(18, 17, 17);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.bar {
+    display: none;
+}
+
+nav a:hover, nav a.active {
+    color: #3108d7;
+    border-bottom: 3px solid #1800f1;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: white;
+}
+
+.home-conten h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #3207df;
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: rgb(10, 33, 241);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: white;
+    letter-spacing: 0.3rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background-color: rgb(96, 111, 240);
+    color: white;
+}
+
+.home-img img {
+    position: relative;
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(183, 75, 75, 0.5);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    transform: scale(1.05);
+}
+
+#about, #skills, #projects, #contact {
+    background-color: white;
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+
+h1 {
+    font-size: 3.6rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    color: #333;
+    text-align: center;
+}
+
+/* TENTANG SAYA (EDUCATION & EXPERIENCE) */
+.education {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 1.5rem;
+}
+
+.education-img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.education-img:active {
+    transform: scale(0.95);
+}
+
+.education-detail {
+    display: none;
+    text-align: left;
+}
+
+.education-detail h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.education-detail.active {
+    display: block;
+    animation: fadeInRight 0.5s ease forwards;
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(-2rem); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* SKILLS BENTO GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.skill-card {
+    background-color: #f8f9fa;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-large {
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: #0056b3;
+    margin-bottom: 2rem;
+}
+
+.skill-card h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+.card-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.card-tags span {
+    background-color: #e9ecef;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.card-horizontal {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icon-box {
+    background-color: #e2e8f0;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: #111;
+    flex-shrink: 0;
+}
+
+.card-small {
+    justify-content: center;
+}
+
+/* PROJECTS */
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    width: 35rem;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.project-detail {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.project-detail h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #3207df;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: 0.3s;
+    text-align: center;
+    width: max-content;
+}
+
+.btn-small:hover {
+    background-color: #1800f1;
+}
+
+/* CONTACT */
+.info-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.contact-section, .address-section {
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    border: 1px solid #f0f0f0;
+}
+
+.contact-section h2, .address-text h3 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #3207df;
+    width: 2.5rem;
+    text-align: center;
+}
+
+.contact-item a {
+    color: #444;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #3207df;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 25rem;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+}
+
+.map-container iframe:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(2rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MEDIA QUERIES MOBILE */
+@media (max-width: 768px) {
+    html { font-size: 55%; }
+    header { padding: 2rem 5%; }
+    .bar { display: block; font-size: 2.5rem; color: #333; cursor: pointer; }
+    
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    
+    nav.active { display: flex; }
+    nav a { display: block; margin: 1.5rem 0; text-align: center; }
+    
+    #home { flex-direction: column; text-align: center; padding-top: 12rem; }
+    .home-img img { width: 70vw; }
+    
+    .education-item { flex-direction: column; text-align: center; }
+    .skills-grid, .skills-bottom-grid { grid-template-columns: 1fr; }
+    .card-large { min-height: auto; }
+    .card-horizontal { flex-direction: column; align-items: flex-start; }
+    .info-contact { grid-template-columns: 1fr; }
+}
